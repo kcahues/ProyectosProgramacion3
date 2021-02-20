@@ -23,6 +23,8 @@ public class Principal {
             System.out.println("Seleccionar una opcion");
             System.out.println("a  - Si desea sumar");
             System.out.println("b  - Si desea restar");
+            System.out.println("c  - Si desea multiplicar");
+            System.out.println("d  - Si desea dividir");
             System.out.println("Escriba su opcion:");
             
             //Recibe el valor del buffer del teclado
@@ -73,6 +75,48 @@ public class Principal {
                     //Sale del case
                     break;
                     
+                 case "c":
+                    strOpcion = "Multiplicacion";
+                    System.out.println("");
+                    
+                    //Solicitar los valores numericos
+                    for (int i = 0; i < 2; i++) {
+                        System.out.println("Ingrese el numero "+ (i+1) + " : ");
+                        fltArrNumeros[i] = objInput.nextFloat();
+                    }
+                    
+                    fltResultado = fltArrNumeros[0] * fltArrNumeros[1];
+                    
+                    //Control
+                    blnError = false;
+                    
+                    
+                    //Sale del case
+                    break;
+                    
+                case "d":
+                    strOpcion = "Division";
+                    System.out.println("");
+                    
+                    //Solicitar los valores numericos
+                    for (int i = 0; i < 2; i++) {
+                        System.out.println("Ingrese el numero "+ (i+1) + " : ");
+                        fltArrNumeros[i] = objInput.nextFloat();
+                    }
+                    
+                    if(fltArrNumeros[1] == 0){
+                        System.out.println("No se puede dividir entre 0");
+                        //Control
+                        blnError = true;
+                    }else{
+                        fltResultado = fltArrNumeros[0] / fltArrNumeros[1];
+                        //Control
+                         blnError = false;
+                    }
+                     
+                    //Sale del case
+                    break;    
+                    
                 default:
                     //Error
                     blnError = true;
@@ -95,6 +139,9 @@ public class Principal {
             // Capturar el buffer para continuar
             Scanner objInput2 = new Scanner(System.in);
             strContinuar = objInput2.nextLine();
+            
+            //Se limpia el buffer para que no se salte el menu
+            objInput.nextLine();
         } while (strContinuar.equals("s") || strContinuar.equals("S"));
     }
     
