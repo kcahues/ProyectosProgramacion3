@@ -14,43 +14,13 @@ import java.util.Scanner;
  *
  * @author kevin
  */
-public class NewClass {
+public class Main {
     
     public static void main (String[] args){
         JugadorBO jugadorBO = new JugadorBO();
         ArrayList lista = new ArrayList<>();
         
-        
-//        jugador.setIdJugador(1);
-//        jugador.setNombre("Kevin");
-//        jugador.setSaldo(100);
-//        jugador.setBorrado(false);
-//        
-//        lista.add(jugador);
-//        
-//        Jugador jugador2 = new Jugador();
-//        jugador2.setIdJugador(2);
-//        jugador2.setNombre("Matias");
-//        jugador2.setSaldo(900);
-//        jugador2.setBorrado(true);
-//        
-//        lista.add(jugador2);
-//        jugadorBO.crearArchivo(lista);
-//        
-//        ArrayList<Jugador> lista2 = new ArrayList<>();
-//        lista2 = jugadorBO.leerArchivo();
-//        
-//        jugadorBO.menu();
-//        for (Jugador cancion : lista2) {
-//                System.out.print(cancion.getIdJugador());
-//                System.out.print(" ");
-//                System.out.print(cancion.getNombre());
-//                System.out.print(" ");
-//                System.out.print(cancion.getSaldo());
-//                System.out.print(" ");
-//                System.out.println(cancion.isBorrado());
-//        }
-//        // Define variables
+        // Define variables
         Scanner objInput = new Scanner(System.in);
         String strContinuar = null;
         
